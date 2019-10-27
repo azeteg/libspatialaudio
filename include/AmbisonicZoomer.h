@@ -54,11 +54,11 @@ public:
     /**
         Get zoom factor.
     */
-    float GetZoom();
+    float GetZoom() const;
     /**
         Zoom into B-Format stream.
     */
-    void Process(CBFormat* pBFSrcDst, unsigned nSamples);
+    void Process(CBFormat* pBFSrcDst, unsigned nSamples) const;
     /**
         Compute factorial of integer
     */

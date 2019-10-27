@@ -123,7 +123,7 @@ void CAmbisonicSource::SetPosition(PolarPoint polPosition)
     m_polPosition = polPosition;
 }
 
-PolarPoint CAmbisonicSource::GetPosition()
+PolarPoint CAmbisonicSource::GetPosition() const
 {
     return m_polPosition;
 }
@@ -146,12 +146,12 @@ void CAmbisonicSource::SetCoefficient(unsigned nChannel, float fCoeff)
     m_pfCoeff[nChannel] = fCoeff;
 }
 
-float CAmbisonicSource::GetOrderWeight(unsigned nOrder)
+float CAmbisonicSource::GetOrderWeight(unsigned nOrder) const
 {
     return m_pfOrderWeights[nOrder];
 }
 
-float CAmbisonicSource::GetCoefficient(unsigned nChannel)
+float CAmbisonicSource::GetCoefficient(unsigned nChannel) const
 {
     return m_pfCoeff[nChannel];
 }
@@ -161,7 +161,7 @@ void CAmbisonicSource::SetGain(float fGain)
     m_fGain = fGain;
 }
 
-float CAmbisonicSource::GetGain()
+float CAmbisonicSource::GetGain() const
 {
     return m_fGain;
 }

@@ -120,7 +120,7 @@ void CAmbisonicEncoderDist::SetRoomRadius(float fRoomRadius)
     m_fRoomRadius = fRoomRadius;
 }
 
-float CAmbisonicEncoderDist::GetRoomRadius()
+float CAmbisonicEncoderDist::GetRoomRadius() const
 {
     return m_fRoomRadius;
 }

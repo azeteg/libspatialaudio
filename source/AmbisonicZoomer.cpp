@@ -80,12 +80,12 @@ void CAmbisonicZoomer::SetZoom(float fZoom)
     m_fZoom = std::min(fZoom, 0.99f);
 }
 
-float CAmbisonicZoomer::GetZoom()
+float CAmbisonicZoomer::GetZoom() const
 {
     return m_fZoom;
 }
 
-void CAmbisonicZoomer::Process(CBFormat* pBFSrcDst, unsigned nSamples)
+void CAmbisonicZoomer::Process(CBFormat* pBFSrcDst, unsigned nSamples) const
 {
     for(unsigned niSample = 0; niSample < nSamples; niSample++)
     {

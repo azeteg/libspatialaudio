@@ -23,17 +23,17 @@ CAmbisonicBase::CAmbisonicBase()
 {
 }
 
-unsigned CAmbisonicBase::GetOrder()
+unsigned CAmbisonicBase::GetOrder() const
 {
     return m_nOrder;
 }
 
-bool CAmbisonicBase::GetHeight()
+bool CAmbisonicBase::GetHeight() const
 {
     return m_b3D;
 }
 
-unsigned CAmbisonicBase::GetChannelCount()
+unsigned CAmbisonicBase::GetChannelCount() const
 {
     return m_nChannelCount;
 }

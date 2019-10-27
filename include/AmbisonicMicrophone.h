@@ -36,7 +36,7 @@ public:
     /**
         Decode B-Format to speaker feed.
     */
-    void Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst);
+    void Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst) const;
     /**
         Set the microphone's directivity.
     */
@@ -44,7 +44,7 @@ public:
     /**
         Get the microphone's directivity.
     */
-    float GetDirectivity();
+    float GetDirectivity() const;
 
 protected:
     float m_fDirectivity;

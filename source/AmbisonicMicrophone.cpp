@@ -30,7 +30,7 @@ void CAmbisonicMicrophone::Refresh()
     m_pfCoeff[0] *= (2.f - m_fDirectivity) * sqrtf(2.f);
 }
 
-void CAmbisonicMicrophone::Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst)
+void CAmbisonicMicrophone::Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst) const
 {
     unsigned niChannel = 0;
     unsigned niSample = 0;
@@ -53,7 +53,7 @@ void CAmbisonicMicrophone::SetDirectivity(float fDirectivity)
     m_fDirectivity = fDirectivity;
 }
 
-float CAmbisonicMicrophone::GetDirectivity()
+float CAmbisonicMicrophone::GetDirectivity() const
 {
     return m_fDirectivity;
 }

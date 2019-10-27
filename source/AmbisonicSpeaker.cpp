@@ -37,7 +37,7 @@ void CAmbisonicSpeaker::Refresh()
     CAmbisonicSource::Refresh();
 }
 
-void CAmbisonicSpeaker::Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst)
+void CAmbisonicSpeaker::Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst) const
 {
     unsigned niChannel = 0;
     unsigned niSample = 0;

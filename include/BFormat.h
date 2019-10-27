@@ -33,7 +33,7 @@ public:
     /**
         Returns the number of samples.
     */
-    unsigned GetSampleCount();
+    unsigned GetSampleCount() const;
     /**
         Re-create the buffers needed for the given configuration. Previous
         buffer contents are lost.
@@ -54,7 +54,7 @@ public:
     /**
         Copy a number of samples from a specific channel of the BFormat.
     */
-    void ExtractStream(float* pfData, unsigned nChannel, unsigned nSamples);
+    void ExtractStream(float* pfData, unsigned nChannel, unsigned nSamples) const;
 
     /**
         Copy the content of the buffer. It is assumed that the two objects are
@@ -68,7 +68,7 @@ public:
     /**
         Returns true if the configuration of the two objects don't match.
     */
-    bool operator != (const CBFormat &bf);
+    bool operator != (const CBFormat &bf) const;
     CBFormat& operator += (const CBFormat &bf);
     CBFormat& operator -= (const CBFormat &bf);
     CBFormat& operator *= (const CBFormat &bf);

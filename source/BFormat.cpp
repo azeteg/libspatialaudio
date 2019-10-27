@@ -21,7 +21,7 @@ CBFormat::CBFormat()
     m_nDataLength = 0;
 }
 
-unsigned CBFormat::GetSampleCount()
+unsigned CBFormat::GetSampleCount() const
 {
     return m_nSamples;
 }
@@ -62,7 +62,7 @@ void CBFormat::InsertStream(float* pfData, unsigned nChannel, unsigned nSamples)
     memcpy(m_ppfChannels[nChannel], pfData, nSamples * sizeof(float));
 }
 
-void CBFormat::ExtractStream(float* pfData, unsigned nChannel, unsigned nSamples)
+void CBFormat::ExtractStream(float* pfData, unsigned nChannel, unsigned nSamples) const
 {
     memcpy(pfData, m_ppfChannels[nChannel], nSamples * sizeof(float));
 }
@@ -80,7 +80,7 @@ bool CBFormat::operator == (const CBFormat &bf)
         return false;
 }
 
-bool CBFormat::operator != (const CBFormat &bf)
+bool CBFormat::operator != (const CBFormat &bf) const
 {
     if(m_b3D != bf.m_b3D || m_nOrder != bf.m_nOrder || m_nDataLength != bf.m_nDataLength)
         return true;

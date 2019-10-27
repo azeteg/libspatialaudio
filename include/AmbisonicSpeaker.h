@@ -41,7 +41,7 @@ public:
     /**
         Decode B-Format to speaker feed.
     */
-    void Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst);
+    void Process(CBFormat* pBFSrc, unsigned nSamples, float* pfDst) const;
 };
 
 #endif // _AMBISONIC_SPEAKER_H

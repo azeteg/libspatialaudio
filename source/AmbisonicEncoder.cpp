@@ -37,7 +37,7 @@ void CAmbisonicEncoder::Refresh()
     CAmbisonicSource::Refresh();
 }
 
-void CAmbisonicEncoder::Process(float* pfSrc, unsigned nSamples, CBFormat* pfDst)
+void CAmbisonicEncoder::Process(float* pfSrc, unsigned nSamples, CBFormat* pfDst) const
 {
     unsigned niChannel = 0;
     unsigned niSample = 0;

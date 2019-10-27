@@ -66,16 +66,16 @@ public:
     /**
         Decode B-Format to speaker feeds.
     */
-    void Process(CBFormat* pBFSrc, unsigned nSamples, float** ppfDst);
+    void Process(CBFormat* pBFSrc, unsigned nSamples, float** ppfDst) const;
     /**
         Returns the current speaker setup, which is a ::SpeakerSetUps
         enumeration.
     */
-    int GetSpeakerSetUp();
+    int GetSpeakerSetUp() const;
     /**
         Returns the number of speakers in the current speaker setup.
     */
-    unsigned GetSpeakerCount();
+    unsigned GetSpeakerCount() const;
     /**
         Used when current speaker setup is ::kCustomSpeakerSetUp, to position
         each speaker. Should be used by iterating nSpeaker for the number of speakers
@@ -88,7 +88,7 @@ public:
         the position of the speaker of index nSpeaker, in the current speaker
         setup.
     */
-    PolarPoint GetPosition(unsigned nSpeaker);
+    PolarPoint GetPosition(unsigned nSpeaker) const;
     /**
         Sets the weight [0,1] for the spherical harmonics of the given order,
         at the given speaker.
@@ -98,12 +98,12 @@ public:
         Returns the weight [0,1] for the spherical harmonics of the given order,
         at the given speaker.
     */
-    float GetOrderWeight(unsigned nSpeaker, unsigned nOrder);
+    float GetOrderWeight(unsigned nSpeaker, unsigned nOrder) const;
     /**
         Gets the coefficient of the specified channel/component of the
         specified speaker. Useful for the Binauralizer.
     */
-    virtual float GetCoefficient(unsigned nSpeaker, unsigned nChannel);
+    virtual float GetCoefficient(unsigned nSpeaker, unsigned nChannel) const;
     /**
         Sets the coefficient of the specified channel/component of the
         specified speaker. Useful for presets for irregular physical loudspeakery arrays

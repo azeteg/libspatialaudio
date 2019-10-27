@@ -172,7 +172,7 @@ void CAmbisonicProcessor::SetOrientation(Orientation orientation)
     m_orientation = orientation;
 }
 
-Orientation CAmbisonicProcessor::GetOrientation()
+Orientation CAmbisonicProcessor::GetOrientation() const
 {
     return m_orientation;
 }

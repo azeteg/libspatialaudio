@@ -52,7 +52,7 @@ public:
     /**
         Get azimuth, elevation, and distance settings.
     */
-    virtual PolarPoint GetPosition();
+    virtual PolarPoint GetPosition() const;
     /**
         Sets the weight [0,1] for the spherical harmonics of the given order.
     */
@@ -69,12 +69,12 @@ public:
     /**
         Gets the weight [0,1] for the spherical harmonics of the given order.
     */
-    virtual float GetOrderWeight(unsigned nOrder);
+    virtual float GetOrderWeight(unsigned nOrder) const;
     /**
         Gets the coefficient of the specified channel/component. Useful for the
         Binauralizer.
     */
-    virtual float GetCoefficient(unsigned nChannel);
+    virtual float GetCoefficient(unsigned nChannel) const;
     /**
         Sets the source's gain.
     */
@@ -82,7 +82,7 @@ public:
     /**
         Gets the source's gain.
     */
-    virtual float GetGain();
+    virtual float GetGain() const;
 
 protected:
     std::vector<float> m_pfCoeff;

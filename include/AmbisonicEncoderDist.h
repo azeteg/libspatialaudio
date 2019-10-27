@@ -59,7 +59,7 @@ public:
         Returns the radius of the intended playback speaker setup, which is
         used for the interior effect (W-Panning).
     */
-    float GetRoomRadius();
+    float GetRoomRadius() const;
 
 protected:
     unsigned m_nSampleRate;

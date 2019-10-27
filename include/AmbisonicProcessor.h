@@ -139,7 +139,7 @@ public:
     /**
         Get yaw, roll, and pitch settings.
     */
-    Orientation GetOrientation();
+    Orientation GetOrientation() const;
     /**
         Rotate B-Format stream.
     */

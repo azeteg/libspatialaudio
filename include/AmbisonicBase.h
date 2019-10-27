@@ -31,17 +31,17 @@ public:
     /**
         Gets the order of the current Ambisonic configuration.
     */
-    unsigned GetOrder();
+    unsigned GetOrder() const;
     /**
         Gets true or false depending on whether the current Ambisonic
         configuration has height(3D).
     */
-    bool GetHeight();
+    bool GetHeight() const;
     /**
         Gets the number of B-Format channels in the current Ambisonic
         configuration.
     */
-    unsigned GetChannelCount();
+    unsigned GetChannelCount() const;
     /**
         Re-create the object for the given configuration. Previous data is
         lost.

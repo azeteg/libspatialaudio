@@ -53,7 +53,7 @@ void CAmbisonicDecoder::Refresh()
         m_pAmbSpeakers[niSpeaker].Refresh();
 }
 
-void CAmbisonicDecoder::Process(CBFormat* pBFSrc, unsigned nSamples, float** ppfDst)
+void CAmbisonicDecoder::Process(CBFormat* pBFSrc, unsigned nSamples, float** ppfDst) const
 {
     for(unsigned niSpeaker = 0; niSpeaker < m_nSpeakers; niSpeaker++)
     {
@@ -61,12 +61,12 @@ void CAmbisonicDecoder::Process(CBFormat* pBFSrc, unsigned nSamples, float** ppf
     }
 }
 
-int CAmbisonicDecoder::GetSpeakerSetUp()
+int CAmbisonicDecoder::GetSpeakerSetUp() const
 {
     return m_nSpeakerSetUp;
 }
 
-unsigned CAmbisonicDecoder::GetSpeakerCount()
+unsigned CAmbisonicDecoder::GetSpeakerCount() const
 {
     return m_nSpeakers;
 }
@@ -76,7 +76,7 @@ void CAmbisonicDecoder::SetPosition(unsigned nSpeaker, PolarPoint polPosition)
     m_pAmbSpeakers[nSpeaker].SetPosition(polPosition);
 }
 
-PolarPoint CAmbisonicDecoder::GetPosition(unsigned nSpeaker)
+PolarPoint CAmbisonicDecoder::GetPosition(unsigned nSpeaker) const
 {
     return m_pAmbSpeakers[nSpeaker].GetPosition();
 }
@@ -86,12 +86,12 @@ void CAmbisonicDecoder::SetOrderWeight(unsigned nSpeaker, unsigned nOrder, float
     m_pAmbSpeakers[nSpeaker].SetOrderWeight(nOrder, fWeight);
 }
 
-float CAmbisonicDecoder::GetOrderWeight(unsigned nSpeaker, unsigned nOrder)
+float CAmbisonicDecoder::GetOrderWeight(unsigned nSpeaker, unsigned nOrder) const
 {
     return m_pAmbSpeakers[nSpeaker].GetOrderWeight(nOrder);
 }
 
-float CAmbisonicDecoder::GetCoefficient(unsigned nSpeaker, unsigned nChannel)
+float CAmbisonicDecoder::GetCoefficient(unsigned nSpeaker, unsigned nChannel) const
 {
     return m_pAmbSpeakers[nSpeaker].GetCoefficient(nChannel);
 }
