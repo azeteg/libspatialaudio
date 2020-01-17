@@ -45,7 +45,7 @@ unsigned OrderToComponentPosition(unsigned nOrder, bool b3D)
         case 0:    nIndex = 0;    break;
         case 1:    nIndex = 1;    break;
         case 2:    nIndex = 4;    break;
-        case 3:    nIndex = 10;break;
+        case 3:    nIndex = 9;    break;
         }
     }
     else
